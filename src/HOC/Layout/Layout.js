@@ -42,6 +42,7 @@ class Layout extends Component {
     }
 
     handleAnswerSelected(event) {
+        console.log(event);
         this.setUserAnswer(event.currentTarget.value);
 
         if(this.state.counter < QuizQuestions.length - 1) {
@@ -57,7 +58,7 @@ class Layout extends Component {
                 answer={this.state.answer}
                 answerOptions={this.state.answerOptions}
                 question={this.state.question}
-                onAnswerSelected={this.handleAnswerSelected}
+                onClick={this.handleAnswerSelected}
             />
         );
     }

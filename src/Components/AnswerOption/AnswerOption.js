@@ -11,7 +11,7 @@ const answerOption = (props) => {
                 id={props.answerType}
                 value={props.answerType}
                 disabled={props.answer}
-                onChange={props.onAnswerSelected}>
+                onClick={props.onClick}>
                 {props.answerContent}
             </button>
       

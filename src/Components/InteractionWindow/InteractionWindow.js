@@ -16,7 +16,7 @@ const interactionWindow = (props) => {
                 answerType={key.type}
                 answer={props.answer}
                 questionId={props.questionId}
-                onAnswerSelected={props.onAnswerSelected}
+                onClick={props.onClick}
             />
         );
     }
