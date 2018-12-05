@@ -1,11 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import styles from './InteractionWindow.module.css';
+import styles from './Question.module.css';
 
-const interactionWindow = (props) => {
+const question = (props) => {
     return (
-        <div className={styles.InteractionWindow}></div>
+        <h2 className={styles.Question}>{props.content}</h2>
     );
 };
 
-export default interactionWindow;
+question.PropTypes = {
+    content: PropTypes.string.isRequired
+};
+
+export default question;
