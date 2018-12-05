@@ -1,0 +1,11 @@
+.InteractionWindow {
+    background-color: #373f51;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 70%;
+    width: 70%;
+    color: #fefcfd;
+    border-radius: 25px;
+}
