@@ -6,15 +6,14 @@
     transform: translate(-100%, -50%);
     height: 100%;
     width: 40%;
-    color: #fefcfd;
-    font-weight: bold;
-    font-size: 125%;
+    border-radius: 5px;
 }
 
 .Center {
+    width: 100%;
     margin: 0;
     position: absolute;
     top: 25%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -10%);
 }

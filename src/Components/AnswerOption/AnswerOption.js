@@ -6,19 +6,17 @@ import styles from './AnswerOption.module.css';
 const answerOption = (props) => {
     return(
         <li className={styles.li}>
-            <input
-                type="radio"
-                className="radioCustomButton"
-                name="radioGroup"
-                checked={props.answerType === props.answer}
+            <button
+                className={styles.Button}
                 id={props.answerType}
                 value={props.answerType}
                 disabled={props.answer}
-                onChange={props.onAnswerSelected}
-            />
-            <label className="radioCustomLabel" htmlFor={props.answerType}>
+                onChange={props.onAnswerSelected}>
                 {props.answerContent}
-            </label>
+            </button>
+      
+            
+            
         </li>
     );
 }
