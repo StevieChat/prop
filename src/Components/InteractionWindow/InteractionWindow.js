@@ -1,5 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 
 import Question from '../Question/Question';
 import AnswerOption from '../AnswerOption/AnswerOption';
@@ -29,13 +28,6 @@ const interactionWindow = (props) => {
             </div>
         </div>
     );
-
-    // interactionWindow.PropTypes = {
-    //     answer: PropTypes.string.isRequired,
-    //     answerOptions: PropTypes.array.isRequired,
-    //     question: PropTypes.string.isRequired,
-    //     onAnswerSelected: PropTypes.func.isRequired
-    // };
 };
 
 export default interactionWindow;

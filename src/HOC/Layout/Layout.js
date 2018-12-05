@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import QuizQuestions from '../../api/QuizQuestions';
 
 import InteractionWindow from '../../Components/InteractionWindow/InteractionWindow';
+import ImageWindow from '../../Components/ImageWindow/ImageWindow';
+import Auxiliary from '../Auxiliary/Auxiliary';
 
 class Layout extends Component {
 
@@ -54,12 +56,17 @@ class Layout extends Component {
 
     render(){
         return (
-            <InteractionWindow
-                answer={this.state.answer}
-                answerOptions={this.state.answerOptions}
-                question={this.state.question}
-                onClick={this.handleAnswerSelected}
-            />
+            <Auxiliary>
+                <InteractionWindow
+                    answer={this.state.answer}
+                    answerOptions={this.state.answerOptions}
+                    question={this.state.question}
+                    onClick={this.handleAnswerSelected}
+                />
+
+                <ImageWindow></ImageWindow>
+            </Auxiliary>
+            
         );
     }
 }

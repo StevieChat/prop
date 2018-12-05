@@ -1,0 +1,10 @@
+.ImageWindow {
+    background-color: #ff6b6b;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(10%, -50%);
+    height: 80%;
+    width: 40%;
+    border-radius: 5px;
+}
