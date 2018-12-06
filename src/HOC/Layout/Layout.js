@@ -51,9 +51,7 @@ class Layout extends Component {
 
         if(this.state.counter < QuizQuestions.length - 1) {
             setTimeout(() => this.setNextQuestion(), 300);
-        } else {
-
-        }
+        } 
     }
 
     render(){
