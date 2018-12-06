@@ -14,6 +14,17 @@ var quizQuestions = [
                 type: "Sony",
                 content: "Uncharted"
             }
+        ],
+        images: [
+            {
+                name: "imageone"
+            },
+            {
+                name: "imagetwo"
+            },
+            {
+                name: "imagethree"
+            }
         ]
     },
     {
@@ -31,6 +42,17 @@ var quizQuestions = [
                 type: "Sony",
                 content: "Playstation 1"
             }
+        ],
+        images: [
+            {
+                name: "imagefour"
+            },
+            {
+                name: "imagefive"
+            },
+            {
+                name: "imagesix"
+            }
         ]
     },
     {
@@ -47,6 +69,11 @@ var quizQuestions = [
             {
                 type: "Sony",
                 content: "Gran Turismo"
+            }
+        ],
+        images: [
+            {
+                name: "imageseven"
             }
         ]
     },

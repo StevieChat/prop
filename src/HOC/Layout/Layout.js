@@ -15,6 +15,7 @@ class Layout extends Component {
             question: '',
             answerOptions: [],
             answer: '',
+            imgNames: [],
         };
 
         this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
@@ -23,7 +24,8 @@ class Layout extends Component {
     componentWillMount () {
         this.setState({
             question: QuizQuestions[0].question,
-            answerOptions: QuizQuestions[0].answers
+            answerOptions: QuizQuestions[0].answers,
+            imgNames: QuizQuestions[0].images
         });
     }
 
@@ -39,12 +41,12 @@ class Layout extends Component {
             counter: counter,
             question: QuizQuestions[counter].question,
             answerOptions: QuizQuestions[counter].answers,
+            imgNames: QuizQuestions[counter].images,
             answer: ''
         });
     }
 
     handleAnswerSelected(event) {
-        console.log(event);
         this.setUserAnswer(event.currentTarget.value);
 
         if(this.state.counter < QuizQuestions.length - 1) {
@@ -64,7 +66,9 @@ class Layout extends Component {
                     onClick={this.handleAnswerSelected}
                 />
 
-                <ImageWindow></ImageWindow>
+                <ImageWindow
+                    imgNames={this.state.imgNames}
+                />
             </Auxiliary>
             
         );
