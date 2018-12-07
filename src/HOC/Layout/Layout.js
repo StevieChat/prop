@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import QuizQuestions from '../../api/QuizQuestions';
+import Data from '../../api/Data';
 
 import InteractionWindow from '../../Components/InteractionWindow/InteractionWindow';
 import ImageWindow from '../../Components/ImageWindow/ImageWindow';
@@ -12,9 +12,7 @@ class Layout extends Component {
 
         this.state = {
             counter: 0,
-            question: '',
-            answerOptions: [],
-            answer: '',
+            description: '',
             imgNames: [],
         };
 
@@ -23,9 +21,8 @@ class Layout extends Component {
 
     componentWillMount () {
         this.setState({
-            question: QuizQuestions[0].question,
-            answerOptions: QuizQuestions[0].answers,
-            imgNames: QuizQuestions[0].images
+            description: Data[0].description,
+            imgNames: Data[0].images
         });
     }
 
@@ -39,17 +36,15 @@ class Layout extends Component {
         const counter = this.state.counter +1;
         this.setState({
             counter: counter,
-            question: QuizQuestions[counter].question,
-            answerOptions: QuizQuestions[counter].answers,
-            imgNames: QuizQuestions[counter].images,
-            answer: ''
+            description: Data[counter].description,
+            imgNames: Data[counter].images,
         });
     }
 
     handleAnswerSelected(event) {
         this.setUserAnswer(event.currentTarget.value);
 
-        if(this.state.counter < QuizQuestions.length - 1) {
+        if(this.state.counter < Data.length - 1) {
             setTimeout(() => this.setNextQuestion(), 300);
         } 
     }
@@ -58,17 +53,13 @@ class Layout extends Component {
         return (
             <Auxiliary>
                 <InteractionWindow
-                    answer={this.state.answer}
-                    answerOptions={this.state.answerOptions}
-                    question={this.state.question}
-                    onClick={this.handleAnswerSelected}
+                    description={this.state.description}
                 />
 
                 <ImageWindow
                     imgNames={this.state.imgNames}
                 />
-            </Auxiliary>
-            
+            </Auxiliary>          
         );
     }
 }
