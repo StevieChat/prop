@@ -4,6 +4,7 @@ import Data from '../../api/Data';
 import InteractionWindow from '../../Components/InteractionWindow/InteractionWindow';
 import ImageWindow from '../../Components/ImageWindow/ImageWindow';
 import Auxiliary from '../Auxiliary/Auxiliary';
+import NextPageButton from '../../Components/NextPageButton/NextPageButton';
 
 class Layout extends Component {
 
@@ -53,12 +54,13 @@ class Layout extends Component {
         return (
             <Auxiliary>
                 <InteractionWindow
-                    description={this.state.description}
-                />
+                    description={this.state.description}/>
 
                 <ImageWindow
-                    imgNames={this.state.imgNames}
-                />
+                    imgNames={this.state.imgNames}/>
+
+                <NextPageButton />
+
             </Auxiliary>          
         );
     }
