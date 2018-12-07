@@ -26,6 +26,38 @@ var data = [
         description: "Which console would you prefer to play with friends?",
         images: [
             {
+                name: "imagesix"
+            },
+            {
+                name: "imagefive"
+            },
+            {
+                name: "imagefour"
+            },
+            {
+                name: "imagethree"
+            },
+            {
+                name: "imagetwo"
+            },
+            {
+                name: "imageone"
+            }
+        ]
+    },
+    {
+        description: "Which of these racing franchises would you prefer to play a game from?",
+        images: [
+            {
+                name: "imageone"
+            },
+            {
+                name: "imagetwo"
+            },
+            {
+                name: "imagethree"
+            },
+            {
                 name: "imagefour"
             },
             {
@@ -37,18 +69,25 @@ var data = [
         ]
     },
     {
-        description: "Which of these racing franchises would you prefer to play a game from?",
-        images: [
-            {
-                name: "imageseven"
-            }
-        ]
-    },
-    {
         description: "Which of these games do you think is best?",
         images: [
             {
-                name: "imageseven"
+                name: "imagesix"
+            },
+            {
+                name: "imagefive"
+            },
+            {
+                name: "imagefour"
+            },
+            {
+                name: "imagethree"
+            },
+            {
+                name: "imagetwo"
+            },
+            {
+                name: "imageone"
             }
         ]
     },
@@ -56,7 +95,22 @@ var data = [
         description: "What console would you prefer to own?",
         images: [
             {
-                name: "imageseven"
+                name: "imageone"
+            },
+            {
+                name: "imagetwo"
+            },
+            {
+                name: "imagethree"
+            },
+            {
+                name: "imagefour"
+            },
+            {
+                name: "imagefive"
+            },
+            {
+                name: "imagesix"
             }
         ]
     }

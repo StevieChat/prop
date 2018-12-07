@@ -9,11 +9,12 @@ const imageWindow = (props) => {
 
     function renderImages(key) {
         return (
-            <Col sm={4}  className={picStyles.Polaroid}>
-                <Picture
-                    key={key.name}
-                    imgName={key.name}
-                />
+            <Col sm={4}>
+                <div className={picStyles.Polaroid}>
+                    <Picture
+                        key={key.name}
+                        imgName={key.name}/>
+                </div>
             </Col>
         );
     }
@@ -21,7 +22,7 @@ const imageWindow = (props) => {
     return (
         <div className={styles.ImageWindow}>
             <Container className={styles.Container}>
-                <Row>
+                <Row className={picStyles.Row}>
                     {props.imgNames.map(renderImages)}
                 </Row>
             </Container>

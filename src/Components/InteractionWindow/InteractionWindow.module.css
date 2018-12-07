@@ -1,8 +1,8 @@
 .InteractionWindow {
     position: fixed;
-    background-color: red;
     height: 20%;
     width: 100%;
+    text-align: center;
 }
 
 .Center {
