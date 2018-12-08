@@ -4,7 +4,10 @@ import styles from './NextPageButton.module.css';
 
 const nextpagebutton = (props) => {
     return(
-        <button className={styles.Button}>Next</button>
+        <button 
+        className={styles.Button}
+        onClick={props.onClick}
+        >Next</button>
     );
 }
 

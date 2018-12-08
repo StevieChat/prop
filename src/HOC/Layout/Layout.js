@@ -14,25 +14,20 @@ class Layout extends Component {
             counter: 0,
             description: '',
             imgNames: [],
+            isLast: false
         };
 
-        this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
+        this.handleNextPageButtonClick = this.handleNextPageButtonClick.bind(this);
     }
 
     componentWillMount () {
         this.setState({
             description: Data[0].description,
-            imgNames: Data[0].images
+            imgNames: Data[0].images,
         });
     }
 
-    setUserAnswer(answer) {
-        this.setState((state) => ({
-            answer: answer
-        }));
-    }
-
-    setNextQuestion() {
+    setNext() {
         const counter = this.state.counter +1;
         this.setState({
             counter: counter,
@@ -41,19 +36,26 @@ class Layout extends Component {
         });
     }
 
-    handleAnswerSelected(event) {
-        this.setUserAnswer(event.currentTarget.value);
-
+    handleNextPageButtonClick(event) {
         if(this.state.counter < Data.length - 1) {
-            setTimeout(() => this.setNextQuestion(), 300);
-        } 
+            setTimeout(() => this.setNext(), 300);
+
+            if(this.state.counter == Data.length - 2){
+                const islast = true;
+                this.setState({
+                    isLast: islast
+                });
+            }
+        }
     }
 
     render(){
         return (
             <Auxiliary>
                 <InteractionWindow
-                    description={this.state.description}/>
+                    description={this.state.description}
+                    onClick={this.handleNextPageButtonClick}
+                    isLast={this.state.isLast} />
 
                 <ImageWindow
                     imgNames={this.state.imgNames}/>
