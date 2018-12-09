@@ -14,13 +14,18 @@ class Layout extends Component {
             counter: 0,
             description: '',
             imgNames: [],
-            isLast: false
+            isLast: false,
+            isFirst: true
         };
 
         this.handleNextPageButtonClick = this.handleNextPageButtonClick.bind(this);
+        this.handlePrevPageButtonClick = this.handlePrevPageButtonClick.bind(this);
+        this.getIsFirst = this.getIsFirst.bind(this);
+        this.getIsLast = this.getIsLast.bind(this);
     }
 
     componentWillMount () {
+        console.log(" Component will mount Counter " + this.state.counter);
         this.setState({
             description: Data[0].description,
             imgNames: Data[0].images,
@@ -28,25 +33,69 @@ class Layout extends Component {
     }
 
     setNext() {
-        const counter = this.state.counter +1;
+        let counter = this.state.counter +1;
+        let isLastPage = this.getIsLast(counter);
+        let isFirstPage = this.getIsFirst(counter);
+
         this.setState({
             counter: counter,
             description: Data[counter].description,
             imgNames: Data[counter].images,
+            isFirst: isFirstPage,
+            isLast: isLastPage
+        });
+    }
+
+    setPrev() {
+        let counter = this.state.counter -1;
+        let isLastPage = this.getIsLast(counter);
+        let isFirstPage = this.getIsFirst(counter);
+
+        this.setState({
+            counter: counter,
+            description: Data[counter].description,
+            imgNames: Data[counter].images,
+            isFirst: isFirstPage,
+            isLast: isLastPage
         });
     }
 
     handleNextPageButtonClick(event) {
         if(this.state.counter < Data.length - 1) {
-            setTimeout(() => this.setNext(), 300);
-
-            if(this.state.counter == Data.length - 2){
-                const islast = true;
-                this.setState({
-                    isLast: islast
-                });
-            }
+            this.setNext();
+            //setTimeout(() => this.setNext(), 0);
         }
+    }
+
+    handlePrevPageButtonClick(event) {
+        if(this.state.counter > 0){
+            setTimeout(() => this.setPrev(), 0);
+        }
+    }
+
+    getIsLast(counter) {
+        let islast = true;
+
+        if(counter === Data.length - 1){
+            islast = true;
+        } else {
+            islast = false;
+        }
+
+        return islast;
+    }
+
+    getIsFirst(counter) {
+        let isfirst = true;
+
+        if(counter > 0){
+            console.log("compared counter");
+            isfirst = false;
+        } else {
+            isfirst = true;
+        }
+
+        return isfirst;
     }
 
     render(){
@@ -54,8 +103,10 @@ class Layout extends Component {
             <Auxiliary>
                 <InteractionWindow
                     description={this.state.description}
-                    onClick={this.handleNextPageButtonClick}
-                    isLast={this.state.isLast} />
+                    onClickNext={this.handleNextPageButtonClick}
+                    onClickPrev={this.handlePrevPageButtonClick}
+                    isLast={this.state.isLast} 
+                    isFirst={this.state.isFirst} />
 
                 <ImageWindow
                     imgNames={this.state.imgNames}/>

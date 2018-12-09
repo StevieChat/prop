@@ -1,0 +1,29 @@
+.Button{
+    height: 65px;
+    width: 150px;
+    border-radius: 5px;
+    background-color: #4ecdc4;
+    float: left;
+    color: white;
+    font-weight: bold;
+    font-size: 120%;
+    text-align: center;
+    border: solid 1px transparent;
+    -webkit-box-shadow: 0 4px 6px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
+    box-shadow: 0 4px 6px rgba(0,0,0,.3);
+}
+
+.Button:active {
+    transform: translate(1px);
+    filter: saturate(150%);
+    border: 1px solid white;
+}
+
+.Button:hover,
+.Button:focus {
+    background-color: #2da199;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    -moz-box-shadow: 0 10px 20px rgba(0,0,0,.7);
+        box-shadow: 0 10px 20px rgba(0,0,0,.7);
+}
