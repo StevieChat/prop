@@ -3,22 +3,22 @@ var data = [
         description: "What franchise would you rather play a game from?",
         images: [
             {
-                name: "imageone"
+                name: "imageone.jpg"
             },
             {
-                name: "imagetwo"
+                name: "imagetwo.jpg"
             },
             {
-                name: "imagethree"
+                name: "imagethree.jpg"
             },
             {
-                name: "imagefour"
+                name: "imagefour.jpg"
             },
             {
-                name: "imagefive"
+                name: "imagefive.jpg"
             },
             {
-                name: "imagesix"
+                name: "imagesix.jpg"
             }
         ]
     },
@@ -26,22 +26,22 @@ var data = [
         description: "Which console would you prefer to play with friends?",
         images: [
             {
-                name: "imagesix"
+                name: "imagesix.jpg"
             },
             {
-                name: "imagefive"
+                name: "imagefive.jpg"
             },
             {
-                name: "imagefour"
+                name: "imagefour.jpg"
             },
             {
-                name: "imagethree"
+                name: "imagethree.jpg"
             },
             {
-                name: "imagetwo"
+                name: "imagetwo.jpg"
             },
             {
-                name: "imageone"
+                name: "imageone.jpg"
             }
         ]
     },
@@ -49,22 +49,22 @@ var data = [
         description: "Which of these racing franchises would you prefer to play a game from?",
         images: [
             {
-                name: "imageone"
+                name: "imageone.jpg"
             },
             {
-                name: "imagetwo"
+                name: "imagetwo.jpg"
             },
             {
-                name: "imagethree"
+                name: "imagethree.jpg"
             },
             {
-                name: "imagefour"
+                name: "imagefour.jpg"
             },
             {
-                name: "imagefive"
+                name: "imagefive.jpg"
             },
             {
-                name: "imagesix"
+                name: "imagesix.jpg"
             }
         ]
     },
@@ -72,22 +72,22 @@ var data = [
         description: "Which of these games do you think is best?",
         images: [
             {
-                name: "imagesix"
+                name: "imagesix.jpg"
             },
             {
-                name: "imagefive"
+                name: "imagefive.jpg"
             },
             {
-                name: "imagefour"
+                name: "imagefour.jpg"
             },
             {
-                name: "imagethree"
+                name: "imagethree.jpg"
             },
             {
-                name: "imagetwo"
+                name: "imagetwo.jpg"
             },
             {
-                name: "imageone"
+                name: "imageone.jpg"
             }
         ]
     },
@@ -95,22 +95,22 @@ var data = [
         description: "What console would you prefer to own?",
         images: [
             {
-                name: "imageone"
+                name: "imageone.jpg"
             },
             {
-                name: "imagetwo"
+                name: "imagetwo.jpg"
             },
             {
-                name: "imagethree"
+                name: "imagethree.jpg"
             },
             {
-                name: "imagefour"
+                name: "imagefour.jpg"
             },
             {
-                name: "imagefive"
+                name: "imagefive.jpg"
             },
             {
-                name: "imagesix"
+                name: "imagesix.jpg"
             }
         ]
     }
