@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import Data from '../../api/Data';
+import Sound from 'react-sound';
+
+import soundfile from '../../assets/Music/Summertime-Sadness-Vanic-Remix.mp3';
 
 import InteractionWindow from '../../Components/InteractionWindow/InteractionWindow';
 import ImageWindow from '../../Components/ImageWindow/ImageWindow';
@@ -110,6 +113,11 @@ class Layout extends Component {
 
                 <ImageWindow
                     imgNames={this.state.imgNames}/>
+
+                <Sound 
+                    url={soundfile} 
+                    playStatus={Sound.status.STOPPED}
+                    volume={10} />
 
             </Auxiliary>          
         );

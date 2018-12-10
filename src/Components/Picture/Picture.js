@@ -8,7 +8,7 @@ const picture = (props) => {
             height="200"
             title={props.imgName}
             className={styles.Picture} 
-            src={require(`../../../../Images/${props.imgName}`)} 
+            src={require(`../../assets/Images/${props.imgName}`)} 
             alt=""/>    
     );
 }
