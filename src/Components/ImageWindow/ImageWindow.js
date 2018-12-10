@@ -9,8 +9,8 @@ const imageWindow = (props) => {
 
     function renderImages(key) {
         return (
-            <Col sm={4}>
-                <div className={picStyles.Polaroid}>
+            <Col style={{justifyContent: 'center'}} sm={4}>
+                <div className={picStyles.Polaroid} title={key.name}>
                     <Picture
                         key={key.name}
                         imgName={key.name}/>
@@ -21,8 +21,8 @@ const imageWindow = (props) => {
 
     return (
         <div className={styles.ImageWindow}>
-            <Container className={styles.Container}>
-                <Row className={picStyles.Row}>
+            <Container>
+                <Row justify="around" className={picStyles.Row}>
                     {props.imgNames.map(renderImages)}
                 </Row>
             </Container>

@@ -5,11 +5,11 @@ import styles from './Picture.module.css';
 const picture = (props) => {
     return(
         <img 
-            height="200"
+            height="300px"
             title={props.imgName}
             className={styles.Picture} 
             src={require(`../../assets/Images/${props.imgName}`)} 
-            alt=""/>    
+            alt=""/>   
     );
 }
 

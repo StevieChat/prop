@@ -1,7 +1,12 @@
+.Polaroid {
+    display: flex;
+    justify-content: center;
+}
+
 .Polaroid img{
     background: white;
     margin: 50px auto;
-    padding: 10px 10px 25px;
+    padding: 10px 10px 45px;
     -webkit-box-shadow: 0 4px 6px rgba(0,0,0,.3);
     -moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
     box-shadow: 0 4px 6px rgba(0,0,0,.3);
@@ -11,9 +16,9 @@
 }
 
 .Row div:nth-child(even){
-    -webkit-transform: rotate(4deg);
-    -moz-transform: rotate(4deg);
-    transform: rotate(4deg);
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    transform: rotate(2deg);
 }
 
 .Row div:nth-child(odd){

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Data from '../../api/Data';
 import Sound from 'react-sound';
+import {setConfiguration} from 'react-grid-system';
 
 import soundfile from '../../assets/Music/Summertime-Sadness-Vanic-Remix.mp3';
 
@@ -25,10 +26,13 @@ class Layout extends Component {
         this.handlePrevPageButtonClick = this.handlePrevPageButtonClick.bind(this);
         this.getIsFirst = this.getIsFirst.bind(this);
         this.getIsLast = this.getIsLast.bind(this);
+
+        setConfiguration({
+            containerWidths: [540, 750, 960, 1400]
+        });
     }
 
     componentWillMount () {
-        console.log(" Component will mount Counter " + this.state.counter);
         this.setState({
             description: Data[0].description,
             imgNames: Data[0].images,
@@ -66,7 +70,6 @@ class Layout extends Component {
     handleNextPageButtonClick(event) {
         if(this.state.counter < Data.length - 1) {
             this.setNext();
-            //setTimeout(() => this.setNext(), 0);
         }
     }
 
