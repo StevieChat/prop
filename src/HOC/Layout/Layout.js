@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import Data from '../../api/Data';
+import Music from '../../api/Music';
 import Sound from 'react-sound';
 import {setConfiguration} from 'react-grid-system';
-
-import soundfile from '../../assets/Music/Summertime-Sadness-Vanic-Remix.mp3';
 
 import InteractionWindow from '../../Components/InteractionWindow/InteractionWindow';
 import ImageWindow from '../../Components/ImageWindow/ImageWindow';
@@ -16,16 +15,19 @@ class Layout extends Component {
 
         this.state = {
             counter: 0,
+            songCounter: 0,
             description: '',
             imgNames: [],
             isLast: false,
-            isFirst: true
+            isFirst: true,
+            songName: ''
         };
 
         this.handleNextPageButtonClick = this.handleNextPageButtonClick.bind(this);
         this.handlePrevPageButtonClick = this.handlePrevPageButtonClick.bind(this);
         this.getIsFirst = this.getIsFirst.bind(this);
         this.getIsLast = this.getIsLast.bind(this);
+        this.handleSongFinishedPlaying = this.handleSongFinishedPlaying.bind(this);
 
         setConfiguration({
             containerWidths: [540, 750, 960, 1400]
@@ -36,6 +38,7 @@ class Layout extends Component {
         this.setState({
             description: Data[0].description,
             imgNames: Data[0].images,
+            songName: Music[0].songName
         });
     }
 
@@ -104,6 +107,17 @@ class Layout extends Component {
         return isfirst;
     }
 
+    handleSongFinishedPlaying() {
+        let songcounter = this.state.songCounter + 1;
+        let songname = Music[songcounter].songName;
+
+        this.setState({
+            songName: songname,
+            songCounter: songcounter
+        });
+
+    }
+
     render(){
         return (
             <Auxiliary>
@@ -118,9 +132,10 @@ class Layout extends Component {
                     imgNames={this.state.imgNames}/>
 
                 <Sound 
-                    url={soundfile} 
-                    playStatus={Sound.status.STOPPED}
-                    volume={10} />
+                    url={require(`../../assets/Music/${this.state.songName}`)} 
+                    playStatus={Sound.status.PLAYING}
+                    volume={5} 
+                    onFinishedPlaying={this.handleSongFinishedPlaying} />
 
             </Auxiliary>          
         );

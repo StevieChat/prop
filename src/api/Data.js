@@ -60,7 +60,7 @@ var data = [
         ]
     },
     {
-        description: "Our awesome road trips with Irwin and Anna",
+        description: "Going on awesome road trips with Irwin and Anna!",
         images: [
             {
                 name: "trips/coorstour3.jpg"
@@ -83,7 +83,7 @@ var data = [
         ]
     },
     {
-        description: "Enjoying Nature",
+        description: "Enjoying Mother Nature",
         images: [
             {
                 name: "trips/hiking.jpg"
@@ -106,7 +106,7 @@ var data = [
         ]
     },
     {
-        description: "Taking on the Warrior Dash",
+        description: "We conquered the Warrior Dash",
         images: [
             {
                 name: "warriordash/warriordashthree.jpg"
@@ -183,7 +183,7 @@ var data = [
         ]
     },
     {
-        description: "Making Coctails at Casa Bacardi",
+        description: "Making Cocktails at Casa Bacardi",
         images: [
             {
                 name: "bacardi/bacardione.jpg"
@@ -203,7 +203,7 @@ var data = [
         ]
     },
     {
-        description: "Christmas Pics",
+        description: "Family Xmas Pics",
         images: [
             {
                 name: "xmaspics/jaxandjoe.jpg"
@@ -323,7 +323,7 @@ var data = [
         ]
     },
     {
-        description: "We are so cute!",
+        description: "We've been through a lot in just four years...",
         images: [
             {
                 name: "justus/bballgame.jpg"
@@ -346,7 +346,7 @@ var data = [
         ]
     },
     {
-        description: "Our BABIES!!!!",
+        description: "...including raising these trouble makers!",
         images: [
             {
                 name: "Pups/miloone.jpg"
@@ -362,6 +362,14 @@ var data = [
             }          
         ]
     },
+    {
+        description: "Now let's see what we else we can get up to with the rest of our lives together",
+        images: [
+            {
+                name: "wedding.png"
+            }      
+        ]
+    }
   ];
   
   export default data;
